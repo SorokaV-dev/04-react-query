@@ -1,0 +1,28 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background: #f6f7f8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+[role="button"]:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 2px;
+}
