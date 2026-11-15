@@ -11,6 +11,10 @@ import { fetchMovies } from "../../services/movieService";
 import type { Movie } from "../../types/movie";
 import css from "./App.module.css";
 
+const ReactPaginateComponent =
+  (ReactPaginate as unknown as { default?: typeof ReactPaginate }).default ??
+  ReactPaginate;
+
 function App() {
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
@@ -62,7 +66,7 @@ function App() {
         ) : null}
       </section>
       {totalPages > 1 && (
-        <ReactPaginate
+        <ReactPaginateComponent
           pageCount={totalPages}
           pageRangeDisplayed={5}
           marginPagesDisplayed={1}
